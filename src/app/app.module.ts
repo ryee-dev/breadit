@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { CreateSubbreadditComponent } from './create-subbreaddit/create-subbreaddit.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CreateSubbreadditComponent } from './create-subbreaddit/create-subbread
     AppComponent,
     FrontPageComponent,
     CreatePostComponent,
-    CreateSubbreadditComponent
+    CreateSubbreadditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

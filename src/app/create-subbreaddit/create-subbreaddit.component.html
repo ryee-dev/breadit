@@ -1,35 +1,38 @@
 <h3>Create New Subbreaddit</h3>
 <hr>
 <div class="createSubreaddit">
-  <form>
+  <div>
     <label for="nameInput" class="formTitle">name</label>
     <p class="fineText">no spaces, e.g., "books" or "bookclub". avoid using solely trademarked names, e.g. use "FansOfAcme" instead of "Acme". once chosen, this name cannot be changed.</p>
-    <input type="text" name="nameInput" class="form-control">
+    <input #name type="text" name="nameInput" class="form-control" required>
     <br>
 
     <label for="titleInput" class="formTitle">title</label>
     <p class="fineText">e.g., books: made from trees or pixels. recommendations, news, or thoughts</p>
-    <input type="text" name="titleInput" class="form-control">
+    <input #title type="text" name="titleInput" class="form-control">
     <br>
 
     <label for="descriptionInput" class="formTitle">description</label>
     <p class="fineText">Appears in search results and social media links. 500 characters max.</p>
-    <input type="text" name="descriptionInput" class="form-control">
+    <input #desc type="text" name="descriptionInput" class="form-control">
     <br>
 
     <label for="sidebarInput" class="formTitle">sidebar</label>
     <p class="fineText">shown in the sidebar of your subreddit. 10240 characters max.</p>
-    <input type="text" name="sidebarInput" class="form-control">
+    <input  #side type="text" name="sidebarInput" class="form-control">
     <br>
 
-    <label for="backgroundSelect" class="formTitle">look and feel</label>
-    <p class="fineText">used as a thematic color for your subreddit on mobile</p>
-    <ul>
-      <li><input #bgRed name="colorOptions" type="radio" class="form-check-input" value="red"> Red</li>
-      <li><input #bgOrange name="colorOptions" type="radio" class="form-check-input" value="orange"> Orange</li>
-      <li><input #bgLime name="colorOptions" type="radio" class="form-check-input" value="lime"> Lime</li>
-    </ul>
+    <label for="backgroundSelect" class="formTitle">look and feel
+    <p class="fineText">used as a thematic color for your subreddit on mobile</p></label>
+    <select #bg class="bgColor" name="bgColor">
 
-    <button type="submit" name="button" class="btn btn-secondary btn-sm">Create</button>
-  </form>
+      <option name="bgColor" class="form-check-input" value="red"> Red</option>
+      <option name="bgColor" class="form-check-input" value="orange"> Orange</option>
+      <option name="bgColor" class="form-check-input" value="lime"> Lime</option>
+
+    </select>
+
+    <br>
+    <button (click)='createNewSub(name.value, title.value, desc.value, side.value, bg.value)' type="submit" name="button" class="btn btn-secondary btn-sm">Create</button>
+  </div>
 </div>
