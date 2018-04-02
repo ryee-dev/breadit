@@ -1,4 +1,5 @@
 export class Post {
+  public date: Date;
   constructor(
     public id: string,
     public upvotes: number,
@@ -6,6 +7,7 @@ export class Post {
     public user: string,
     public subbreaddit: string,
     public toasted: boolean,
-    public date: Date
+    public link: string,
+    public thumbnail: string
   ) { }
 }
