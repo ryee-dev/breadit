@@ -1,4 +1,6 @@
-<a routerLink=""><p class="lead">breaddit.</p></a>
-<ul *ngFor="let sub of subList">
-  <li>{{sub.name}}</li>
-</ul>
+<div class="row bg-color">
+  <a routerLink=""><p id="logo-text"><img src="../assets/cropped-bread.png" alt="breaddit" id="logo">&nbsp;breaddit</p></a>
+  <div *ngFor="let sub of subList" class="subList">
+    <a (click)='goToSub(sub)' id="subName">{{sub.name}}</a>
+  </div>
+</div>

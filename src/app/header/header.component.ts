@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subbreaddit } from '../models/subbreaddit.model';
 import { SubbreadditService } from '../subbreaddit.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,15 @@ import { SubbreadditService } from '../subbreaddit.service';
   providers: [SubbreadditService]
 })
 export class HeaderComponent implements OnInit {
-  subList: Subbreaddit[];
-  constructor(private subbreadditService: SubbreadditService) { }
+  subList: Subbreaddit[] = SubbreadditService.subbreadditList;
+  constructor(private router: Router, private subbreadditService: SubbreadditService) { }
   ngOnInit() {
    }
-   subList = SubbreadditService.subbreadditList;
+
+  goToSub(clickedSub: Subbreaddit) {
+    // this.subList = SubbreadditService.subbreadditList;
+    SubbreadditService.currentSub = clickedSub;
+    this.router.navigate(['b', clickedSub.name]);
+  }
 
 }

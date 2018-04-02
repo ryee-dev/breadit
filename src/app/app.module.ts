@@ -8,6 +8,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { CreateSubbreadditComponent } from './create-subbreaddit/create-subbreaddit.component';
 import { HeaderComponent } from './header/header.component';
+import { ViewSubComponent } from './view-sub/view-sub.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     FrontPageComponent,
     CreatePostComponent,
     CreateSubbreadditComponent,
-    HeaderComponent
+    HeaderComponent,
+    ViewSubComponent
   ],
   imports: [
     BrowserModule,
