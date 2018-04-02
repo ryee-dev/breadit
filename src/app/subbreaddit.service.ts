@@ -5,6 +5,7 @@ import { Subbreaddit } from './models/subbreaddit.model';
 export class SubbreadditService {
 
   static subbreadditList: Subbreaddit[] = [
+    new Subbreaddit('bakery', '/b/bakery', 'subbreaddit for all things bakery-related', '(sidebar text)', 'yellow'),
     new Subbreaddit('bakery', '/b/bakery', 'subbreaddit for all things bakery-related', '(sidebar text)', 'yellow')
   ];
   constructor() { }
