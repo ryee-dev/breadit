@@ -1,0 +1,14 @@
+.createSubreaddit {
+  width: 40%;
+}
+
+.formTitle {
+  color: blue;
+  font-size: 1.2em;
+}
+
+.fineText {
+  font-size: 0.5em;
+  color: grey;
+  margin-top: -10px;
+}
