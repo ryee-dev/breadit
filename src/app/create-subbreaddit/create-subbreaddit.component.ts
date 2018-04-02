@@ -16,22 +16,9 @@ export class CreateSubbreadditComponent implements OnInit {
     }
 
     createNewSub(name: string, title: string, description: string, sidebar: string, submissionText: string, background: string) {
-      const newSub: Subbreaddit = new Subbreaddit(name, title, description, sidebar, background);
-      // let isUnique = false;
-      console.log(SubbreadditService.subbreadditList[0].name);
-
-      for (let i; i < SubbreadditService.subbreadditList.length; i++) {
-        // console.log(isUnique);
-        if (name !== SubbreadditService.subbreadditList[i].name) {
-          alert('works');
-          // isUnique = true;
-        }
-      }
-      // if (isUnique === false) {
-      SubbreadditService.subbreadditList.push(newSub);
-      console.log(SubbreadditService.subbreadditList);
-      // }
-      console.log(SubbreadditService.subbreadditList);
+      // const newSub: Subbreaddit = new Subbreaddit(name, title, description, sidebar, background);
+      this.subbreadditService.addSub(new Subbreaddit(name, title, description, sidebar));
+      console.log(this.subbreadditService.subs);
     }
 
   }

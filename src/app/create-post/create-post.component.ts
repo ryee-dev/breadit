@@ -15,9 +15,9 @@ export class CreatePostComponent implements OnInit {
   ngOnInit() {
   }
 
-  createNewPost(url: string, title: string, text: string, sub: string) {
-    const newPost = new Post(url, title, text, sub);
-    SubbreadditService.postList.push(newPost);
-  }
+  // createNewPost(url: string, title: string, text: string, sub: string) {
+  //   const newPost = new Post(url, title, text, sub);
+  //   SubbreadditService.postList.push(newPost);
+  // }
 
 }

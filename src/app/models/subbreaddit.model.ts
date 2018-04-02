@@ -1,5 +1,5 @@
 export class Subbreaddit {
-  public submissionText = '';
+    public key: string;
   constructor(
     public name: string,
     public title: string,

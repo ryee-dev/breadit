@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providers: [SubbreadditService]
 })
 export class HeaderComponent implements OnInit {
-  subList: Subbreaddit[] = SubbreadditService.subbreadditList;
+  subList: Subbreaddit[] = this.subbreadditService.subbreadditList;
   constructor(private router: Router, private subbreadditService: SubbreadditService) { }
   ngOnInit() {
    }
