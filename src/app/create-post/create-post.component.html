@@ -1,3 +1,28 @@
-<p>
-  create-post works!
-</p>
+<h3>submit to breaddit</h3>
+<hr>
+<div class="createPost">
+  <div>
+    <label for="nameInput" class="formTitle">url</label>
+    <input #url type="text" name="nameInput" class="form-control" required>
+    <br>
+
+    <label for="titleInput" class="formTitle"><span class="required">*</span>title</label>
+    <p class="fineText">e.g., books: made from trees or pixels. recommendations, news, or thoughts</p>
+    <input #title type="text" name="titleInput" class="form-control">
+    <br>
+
+    <label for="textInput" class="formTitle">text</label>
+    <p class="fineText">(optional)</p>
+    <textarea  #text type="textarea" name="textInput" class="form-control"></textarea>
+    <br>
+
+    <label for="subInput" class="formTitle"><span class="required">*</span>choose where to post</label>
+    <p class="fineText">shown in the sidebar of your subreddit. 10240 characters max.</p>
+    <input  #sub type="text" name="subInput" class="form-control">
+    <br>
+
+
+    <br>
+    <button (click)='createNewPost(url.value, title.value, text.value, sub.value)' type="submit" name="button" class="btn btn-secondary btn-sm">Create</button>
+  </div>
+</div>

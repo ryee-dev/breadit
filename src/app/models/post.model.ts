@@ -1,13 +1,14 @@
 export class Post {
-  public date: Date;
+  public id: string;
+  public date: Date = new Date();
+  public toasted: boolean;
+  public user: string;
+  public thumbnail: string;
+  public upvotes: number;
   constructor(
-    public id: string,
-    public upvotes: number,
-    public title: string,
-    public user: string,
-    public subbreaddit: string,
-    public toasted: boolean,
     public link: string,
-    public thumbnail: string
+    public title: string,
+    public text: string,
+    public subbreaddit: string
   ) { }
 }
