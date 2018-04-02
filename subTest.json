@@ -1,0 +1,18 @@
+{
+  "subbreaddits": {
+    "1" : {
+      "name": "Bakery",
+      "title": "Bread Stuff",
+      "description": "Bread info goes here",
+      "sidebar": "<p>hello</p>",
+      "background": ""
+    },
+    "2": {
+      "name": "Bakery",
+      "title": "Bread Stuff",
+      "description": "Bread info goes here",
+      "sidebar": "<p>hello</p>",
+      "background": ""
+    }
+  }
+}
